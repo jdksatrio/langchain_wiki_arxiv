@@ -12,10 +12,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-arxiv_wrapper=ArxivAPIWrapper(top_k_results=1,doc_content_chars_max=300)
+arxiv_wrapper=ArxivAPIWrapper(top_k_results=1,doc_content_chars_max=1000)
 arxiv_tool=ArxivQueryRun(api_wrapper=arxiv_wrapper)
 
-api_wrapper=WikipediaAPIWrapper(top_k_results=1,doc_content_chars_max=300)
+api_wrapper=WikipediaAPIWrapper(top_k_results=1,doc_content_chars_max=1000)
 wiki_tool=WikipediaQueryRun(api_wrapper=api_wrapper)
 
 tools = [wiki_tool, arxiv_tool]
